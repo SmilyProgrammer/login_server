@@ -5,4 +5,4 @@ mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => console.log("DB Connected"))
-  .catch((error) => console.log("DB Not Connected"));
+  .catch((error) => console.log("DB Not Connected", error));
