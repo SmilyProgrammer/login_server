@@ -1,6 +1,22 @@
 const router = require("express").Router();
+
+// mongodb user module
 const User = require("../models/User");
+
+// mongodb user verification module
+const UserVarification = require("../models/UserVarification");
+
+// password handler
 const bcrypt = require("bcrypt");
+
+// email handler
+const nodemailer = require("nodemailer");
+
+// unique string
+const { v4: uuidv4 } = require("uuid");
+
+// env variables
+require("dotenv").config();
 
 //Signup
 router.post("/signup", async (req, res) => {
